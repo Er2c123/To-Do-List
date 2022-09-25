@@ -6,8 +6,8 @@
     "start": "nodemon server.js",
     "build": "cd client2/todo-list-mern2 && npm run build",
     "install-client": "cd client2/todo-list-mern2 && npm install",
-    "heroku-postbuild": "npm run install-client && npm run build"
-
+    "heroku-postbuild": "npm run install-client && npm run build",
+    "test": "jest"
   },
   "license": "MIT",
   "dependencies": {
@@ -18,5 +18,9 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.10.10",
     "nodemon": "^2.0.19"
+  },
+  "devDependencies": {
+    "jest": "^29.0.3",
+    "supertest": "^6.2.4"
   }
 }

@@ -203,6 +203,8 @@ app.post('/api/item/remove', async (req, res) => {
 		return;
 	}
 })
+
+
 app.post('/api/item/update', async (req, res) => {
 	try {
 		//isUpdating is the string of the todolist item that is being changed
@@ -236,3 +238,5 @@ app.post('/api/item/update', async (req, res) => {
 app.listen(PORT, () => {
 	console.log('Server up at 9999')
 })
+
+module.exports = app;
