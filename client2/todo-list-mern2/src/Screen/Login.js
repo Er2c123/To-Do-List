@@ -36,7 +36,7 @@ function Login() {
     }
 
     return (
-        <div class = "wrap">
+        <div data-testid = "Login" class = "wrap">
             <form class="login-form" onSubmit={login}>
                 <div class="form-header">
                     <h3>Login Form</h3>

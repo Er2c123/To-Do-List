@@ -27,7 +27,7 @@ function Registration() {
     }
 
     return (
-        <div class = "wrap">
+        <div data-testid = "Registration" class = "wrap">
             <form id="reg-form" onSubmit={(event) => { registerUser(event) }} >
                 <div class = "form-header">
                     <h3> Registration form </h3>

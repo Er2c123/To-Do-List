@@ -6,14 +6,14 @@ const User = require('./model/user')
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
 const cors = require('cors');
-const JWT_SECRET = ''
+const JWT_SECRET = 'sdjkfh8923yhjdksbfma@#*(&@*!^#&@bhjb2qiuhesdbhjdsfg839ujkdhfjk'
 const todoItemsModel = require('./model/todoItems');
 const { nextTick } = require('process')
 const todoItems = require('./model/todoItems')
 const PORT = process.env.PORT || 9999
 
 //remove secret key and mongodb uri
-mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://ericj:@cluster0.ttqhj7y.mongodb.net/?retryWrites=true&w=majority', {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://ericj:9jFaBVsnu4HsKR8Z@cluster0.ttqhj7y.mongodb.net/?retryWrites=true&w=majority', {
 	useNewUrlParser: true,
 	useUnifiedTopology: true,
 	useCreateIndex: true

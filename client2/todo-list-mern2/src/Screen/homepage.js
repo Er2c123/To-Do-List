@@ -177,8 +177,10 @@ function Homepage() {
           </div>
         </div>) :
         //if user not logged in, then no list should be displayed
-        <p class = "homepage-not-logged-in"> First, create an acct and login </p>}
-
+        <div data-testid = "homepage">         
+        <p class = "homepage-not-logged-in"> First, create an acct and login </p>
+        </div>
+}
     </div>
   );
 

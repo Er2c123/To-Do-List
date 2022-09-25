@@ -48,7 +48,7 @@ function ChangePassword() {
     }
 
     return (
-        <div>
+        <div data-testid = "todo-1"> 
             {displayComp ?
                 (
                     //only display the input box to change password when user is logged in
