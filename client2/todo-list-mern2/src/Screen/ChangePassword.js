@@ -27,7 +27,6 @@ function ChangePassword() {
 
             //Send bearer token to backend to authorize
             const copyPassword = password;
-            console.log(localStorage.getItem('token'));
             const config = {
                 headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
             };
@@ -40,7 +39,6 @@ function ChangePassword() {
                 config
             )
 
-            console.log(result.data);
             if (result.data.status == 'ok') {
                 alert('Success')
             } else {

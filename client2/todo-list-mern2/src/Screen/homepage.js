@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
-import './App.css';
+import '../App.css';
 
 function Homepage() {
   const [itemText, setItemText] = useState('');
@@ -8,10 +8,11 @@ function Homepage() {
   const [isUpdating, setIsUpdating] = useState('');
   const [updateItemText, setUpdateItemText] = useState('');
   const [displayComp, setDisplayComp] = useState(false);
+
+  //addItem allows for user to add todo items to list
   const addItem = async (e) => {
     e.preventDefault();
     try {
-
       const bodyParameters = {
         username: localStorage.getItem('username'),
         itemText: itemText,
@@ -30,7 +31,7 @@ function Homepage() {
 
   }
 
-
+//once user is authorized, then the user's item list is automatically displayed on the screen
   useEffect(() => {
     const getItemsList = async () => {
       const localUsername = localStorage.getItem('username');
@@ -59,7 +60,7 @@ function Homepage() {
     }
   }, []);
 
-
+  //allows for user to delete items from todo list
   const deleteItem = async (item) => {
     const getItemsList = async () => {
 
@@ -96,8 +97,10 @@ function Homepage() {
     }
   }
 
+
+  //allows for user to edit what the item text displays
   const updateItem = async (e) => {
-   
+    //authorizes user and displays item list for specific user
     const getItemsList = async () => {
       const localUsername = localStorage.getItem('username');
       const config = {
@@ -116,8 +119,7 @@ function Homepage() {
      
     }
 
-
-
+    
     e.preventDefault();
     const localUsername = localStorage.getItem('username');
     const bodyParameters = {
@@ -129,7 +131,7 @@ function Homepage() {
       bodyParameters,
     )
 
-
+    //sets the item 
     setUpdateItemText('');
     setIsUpdating('');
     getItemsList();

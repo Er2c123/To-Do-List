@@ -11,6 +11,8 @@ const todoItemsModel = require('./model/todoItems');
 const { nextTick } = require('process')
 const todoItems = require('./model/todoItems')
 const PORT = process.env.PORT || 9999
+
+//remove secret key and mongodb uri
 mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://ericj:@cluster0.ttqhj7y.mongodb.net/?retryWrites=true&w=majority', {
 	useNewUrlParser: true,
 	useUnifiedTopology: true,

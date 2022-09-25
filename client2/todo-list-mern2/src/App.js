@@ -1,11 +1,11 @@
 
 import './App.css';
 import {Switch, Routes, Link, Route, BrowserRouter} from 'react-router-dom';
-import Homepage from './homepage';
-import Registration from './Registration';
-import Login from './Login';
-import Logout from './Logout';
-import ChangePassword from './ChangePassword';
+import Homepage from './Screen/homepage';
+import Registration from './Screen/Registration';
+import Login from './Screen/Login';
+import Logout from './Screen/Logout';
+import ChangePassword from './Screen/ChangePassword';
 function App () {
   const myStyle = {
     color: "black",
