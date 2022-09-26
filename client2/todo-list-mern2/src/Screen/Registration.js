@@ -10,7 +10,7 @@ function Registration() {
         const copyUsername = username;
         const copyPassword = password;
 
-     
+        //calls api to register the user 
         const result = await axios.post('http://localhost:9999/api/register', {
                 username: copyUsername,
                 password: copyPassword

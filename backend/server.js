@@ -94,7 +94,7 @@ app.post('/api/login', async (req, res) => {
 
 })
 
-
+//makes sure username and password are valid
 app.post('/api/register', async (req, res) => {
 	const { username, password: plainTextPassword } = req.body
 
@@ -117,7 +117,7 @@ app.post('/api/register', async (req, res) => {
 
 	const password = await bcrypt.hash(plainTextPassword, 10)
 
-
+//stores hashed password and creates document for the user
 	try {
 		const response = await User.create({
 			username,
@@ -217,6 +217,7 @@ app.post('/api/item/update', async (req, res) => {
 		let toUpdateDoc = await todoItemsModel.findOne({ "username": username }).lean()
 		let items = toUpdateDoc.items;
 
+		//searchs through item array for item matching string
 		for (let i = 0; i < items.length; i++) {
 			if (items[i] == isUpdating) {
 				items[i] = updateItemText;

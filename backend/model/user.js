@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-
+//user model with username and password
 const UserSchema = new mongoose.Schema(
 	{
 		username: { type: String, required: true, unique: true },

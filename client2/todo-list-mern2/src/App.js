@@ -6,6 +6,8 @@ import Registration from './Screen/Registration';
 import Login from './Screen/Login';
 import Logout from './Screen/Logout';
 import ChangePassword from './Screen/ChangePassword';
+
+//creates various routes linking to diff pages
 function App () {
   const myStyle = {
     color: "black",
